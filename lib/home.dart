@@ -1,4 +1,5 @@
 import 'package:flutter/cupertino.dart';
+import 'package:heimation/components/item.dart';
 import 'variables.dart';
 
 class Home extends StatefulWidget {
@@ -22,19 +23,9 @@ class _Home extends State<Home> {
           crossAxisCount: 2,
           mainAxisSpacing: gridPaddning,
           crossAxisSpacing: gridPaddning,
-          children: <Widget>[
-            Container(
-              color: CupertinoColors.black,
-              child: const Text("He'd have you all unravel at the"),
-            ),
-            Container(
-              color: const Color.fromARGB(255, 89, 89, 89),
-              child: const Text('Heed not the rabble'),
-            ),
-            Container(
-              color: const Color.fromARGB(255, 126, 125, 125),
-              child: const Text('Sound of screams but the'),
-            ),
+          children: const <Widget>[
+            Item(itemName: 'Bed Room',),
+            Item(itemName: 'Hall',),
           ],
         ),
       ),
