@@ -1,5 +1,6 @@
 import 'package:flutter/cupertino.dart';
 import 'home.dart';
+
 void main() => runApp(const PageScaffoldApp());
 
 class PageScaffoldApp extends StatelessWidget {
@@ -8,7 +9,12 @@ class PageScaffoldApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return const CupertinoApp(
-      theme: CupertinoThemeData(brightness: Brightness.light),
+      debugShowCheckedModeBanner: false,
+      theme: CupertinoThemeData(
+        brightness: Brightness.dark,
+        scaffoldBackgroundColor: Color.fromARGB(255, 18, 30, 50),
+        primaryColor: CupertinoColors.activeOrange
+        ),
       home: Home(),
     );
   }
